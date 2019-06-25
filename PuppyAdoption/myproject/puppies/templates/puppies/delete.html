@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>Did a puppy get adopted?</h1>
+	<p>Please fill out the id to remove the puppy!</p>
+	<form method="POST">
+		<div class="form-group">
+			{{form.hidden_tag()}}
+      		<label for="id">Puppy Id:</label>
+			<input type="text" class="form-control" id="id" name="id" placeholder="Id of the puppy you want to remove:">
+		</div>
+				<button type="submit" class="btn btn-danger">Remove Puppy</button>
+	</form>
+
+</div>
+{% endblock %}

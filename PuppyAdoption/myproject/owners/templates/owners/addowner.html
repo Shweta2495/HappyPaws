@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>Add an Owner!</h1>
+	<p>Add a new owner by filling up the form below</p>
+	<form method="POST">
+<!--{{form.hidden_tag()}}<br>
+		{{form.name.label}}		{{form.name()}}<br>
+		{{form.pup_id.label}}   {{form.pup_id()}}<br>
+		{{form.submit()}}<br> -->
+
+		<div class="form-group">
+			{{form.hidden_tag()}}
+      		<label for="name">Owner Name:</label>
+			<input type="text" class="form-control" id="name" name="name" placeholder="Name of the Owner">
+
+
+			<label for="pup_id">Puppy Id:</label>
+			<input type="text" class="form-control" id="pup_id" name="pup_id" placeholder="Id of the Puppy">
+		</div>
+				<button type="submit" class="btn btn-success">Add Owner</button>
+	</form>
+</div>
+
+{% endblock %}
